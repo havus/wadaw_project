@@ -36,6 +36,11 @@
       </div>
 
       <h2>Semangat Hari Pahlawan teman-teman</h2>
+
+      <v-btn depressed small color="indigo lighten-4" class="mt-10" to="/">
+        <font-awesome-icon class="mr-2" icon="arrow-left" />
+        Back To Landing Page
+      </v-btn>
     </v-container>
   </div>
 </template>

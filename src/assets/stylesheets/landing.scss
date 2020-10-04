@@ -1,0 +1,43 @@
+$jumbotron-height:  530px;
+$diagonal-deg:      90px;
+
+#hero {
+  padding-top: 50px;
+  background-image: linear-gradient(
+    to top right,
+    #97a2b5 0%,
+    #434557 100%
+  );
+  min-height:     $jumbotron-height;
+  clip-path:      polygon(0 0, 100% 0, 100% ($jumbotron-height - $diagonal-deg), 0 100%);
+  color:        #2f3246;
+  position:       relative;
+  z-index:        1;
+  margin-bottom:  0;
+  padding-bottom: 30px;
+
+  p { max-width: 450px; }
+
+  .container {
+    margin-top: 100px;
+    padding:    50px;
+    color:    white;
+  
+    #title {
+      display:      flex;
+      align-items:  flex-end;
+  
+      h3 {
+        font-size: 25px;
+  
+        &:hover {
+          color: #cfd4dd;
+        }
+      }
+    }
+  } 
+}
+
+#landing-page {
+  padding-bottom: 130px;
+}

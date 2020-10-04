@@ -4,9 +4,9 @@ $diagonal-deg:      90px;
 #hero {
   padding-top: 50px;
   background-image: linear-gradient(
-    to top right,
-    #97a2b5 0%,
-    #434557 100%
+    to bottom left,
+    #8d98a9 0%,
+    #232531 100%
   );
   min-height:     $jumbotron-height;
   clip-path:      polygon(0 0, 100% 0, 100% ($jumbotron-height - $diagonal-deg), 0 100%);

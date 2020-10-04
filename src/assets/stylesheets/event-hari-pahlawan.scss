@@ -1,0 +1,32 @@
+#event-hari-pahlawan {
+  padding: 100px 20px 130px 20px;
+  background-color: #343b54;
+  min-height: 100%;
+  color: white;
+  overflow-y: scroll;
+}
+
+p {
+  max-width: 920px;
+}
+#header {
+  margin-top: 20px;
+}
+
+#reward, #flow, #term {
+  .list-item {
+    margin-left: 20px;
+    display: flex;
+  }
+  .order-number {
+    min-width: 30px;
+    text-align: center;
+  }
+
+  p { margin: 0; }
+}
+
+h2 {
+  text-align: center;
+  margin-top: 70px;
+}

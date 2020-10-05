@@ -52,16 +52,19 @@ export default {
   name: 'EventHariPahlawan',
   data: () => ({
     rewards: [
-      'Uang tunai sebesar 300 ribu rupiah.',
+      'Uang tunai sebesar 500 ribu rupiah.',
       `Akun instagram peserta yang ditetapkan sebagai pemenang akan kami tag
       di foto mock up baju di akun katalog wadaw.`,
       'Satu buah baju dengan desain peserta yang ditetapkan sebagai pemenang.',
+      'Akun Instagram akan dicantumkan di greeting card setiap penjualanan dengan desainnya',
     ],
     flows: [
       `Upload hasil karya melalui Instagram dan tag @wadaw_project,
       proses penilaian akan dilihat dari Tagged Photos of @wadaw_project,
       maka dari itu akun instagramnya jangan diprivate gaes.`,
+      'Kirim desain ke email kami wadaw.project.id@gmail.com',
       'Filosofi desain dari hasil karya akan memberikan nilai tambahan.',
+      'Mock up baju dengan desain yang telah dibuat akan menambah penilaian',
     ],
     terms: [
       `Karya desain logo yang diikutsertakan adalah karya asli peserta,
@@ -70,7 +73,7 @@ export default {
       'Karya desain logo tidak mengandung unsur pornografi dan isu SARA',
       'Peserta boleh mengirimkan desain lebih dari satu, tidak ada batas maksimal.',
       'Hak Cipta atas karya yang ditetapkan sebagai pemenang lomba menjadi sepenuhnya milik Wadaw Project.',
-      'Periode lomba dari SEKARANG sampai Senin, 9 Oktober 2020 jam 12 malam.',
+      'Periode lomba dari SEKARANG sampai Jum\'at, 16 Oktober 2020 jam 12 malam.',
       'Peserta bebas semua usia (TERSERAAAH).',
     ],
   }),

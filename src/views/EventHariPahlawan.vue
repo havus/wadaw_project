@@ -59,12 +59,10 @@ export default {
       'Akun Instagram akan dicantumkan di greeting card setiap penjualanan dengan desainnya',
     ],
     flows: [
-      `Upload hasil karya melalui Instagram dan tag @wadaw_project,
+      `Upload hasil karya melalui Instagram, tag @wadaw_project dan pakai hastag #wadawharipahlawan,
       proses penilaian akan dilihat dari Tagged Photos of @wadaw_project,
       maka dari itu akun instagramnya jangan diprivate gaes.`,
-      'Kirim desain ke email kami wadaw.project.id@gmail.com',
-      'Filosofi desain dari hasil karya akan memberikan nilai tambahan.',
-      'Mock up baju dengan desain yang telah dibuat akan menambah penilaian',
+      'Kirimkan hasil karya ke email kami wadaw.project.id@gmail.com',
     ],
     terms: [
       `Karya desain logo yang diikutsertakan adalah karya asli peserta,
@@ -72,6 +70,8 @@ export default {
       'Karya desain logo belum pernah diikutsertakan pada lomba dan/atau dipublikasikan sebelumnya.',
       'Karya desain logo tidak mengandung unsur pornografi dan isu SARA',
       'Peserta boleh mengirimkan desain lebih dari satu, tidak ada batas maksimal.',
+      'Filosofi desain dari hasil karya akan memberikan nilai tambahan.',
+      'Mock up baju dengan desain yang telah dibuat akan memberikan nilai tambahan.',
       'Hak Cipta atas karya yang ditetapkan sebagai pemenang lomba menjadi sepenuhnya milik Wadaw Project.',
       'Periode lomba dari SEKARANG sampai Jum\'at, 16 Oktober 2020 jam 12 malam.',
       'Peserta bebas semua usia (TERSERAAAH).',

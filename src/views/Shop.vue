@@ -75,7 +75,7 @@ export default {
         text: `Since covid-19 has become a major problem for all humans are living in this era,
         people around the world have became unproductive, losing inspiration and enthusiasm
         for survive in conditions that force them to stay at home.`,
-        src: 'https://res.cloudinary.com/havus/image/upload/v1602427568/wadaw/products/CMPS_carousel_xqkjcp.jpg',
+        src: 'https://res.cloudinary.com/havus/image/upload/v1602429113/wadaw/products/CMPS_carousel_axqwbm.jpg',
       },
       {
         number: 'third',
@@ -83,7 +83,7 @@ export default {
         text: `Many stories of good and bad relationships during the covid-19 pandemic.
         Love in 2020 is the reality of today's relationships that are limited
         by distance and insecurity.`,
-        src: 'https://res.cloudinary.com/havus/image/upload/v1602427568/wadaw/products/LI_carousel_okbjj5.jpg',
+        src: 'https://res.cloudinary.com/havus/image/upload/v1602429113/wadaw/products/LI_carousel_oevocg.jpg',
       },
     ],
     products: [

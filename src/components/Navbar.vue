@@ -3,7 +3,7 @@
     <!-- 4580E6 -->
     <v-app-bar absolute color="transparent" flat dark>
       <div id="logo" class="ml-10 mr-3">
-        <v-img :src="require('./../assets/logo-white.png')"/>
+        <v-img :src="require('./../assets/images/logo-white.png')"/>
       </div>
       <v-toolbar-title id="nav-title">
         <a href="https://wadaw.id">Wadaw</a>

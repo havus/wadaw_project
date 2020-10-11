@@ -14,6 +14,11 @@ const routes = [
     name: 'EventHariPahlawan',
     component: () => import(/* webpackChunkName: "event-hari-pahlawan" */ '../views/EventHariPahlawan.vue'),
   },
+  {
+    path: '/shop',
+    name: 'Shop',
+    component: () => import(/* webpackChunkName: "shop" */ '../views/Shop.vue'),
+  },
   // {
   //   path: '/home',
   //   name: 'Home',

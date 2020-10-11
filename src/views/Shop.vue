@@ -1,5 +1,6 @@
 <template>
   <div id="shop">
+    <div id="bg-navbar"></div>
     <v-carousel
       cycle
       height="500"
@@ -57,6 +58,8 @@
 // https://cdn.dribbble.com/users/3107626/screenshots/6474827/fancy-04.jpg
 
 <script>
+import '@/assets/stylesheets/shop.scss';
+
 export default {
   data: () => ({
     carouselItems: [
@@ -72,7 +75,7 @@ export default {
         text: `Since covid-19 has become a major problem for all humans are living in this era,
         people around the world have became unproductive, losing inspiration and enthusiasm
         for survive in conditions that force them to stay at home.`,
-        src: 'https://res.cloudinary.com/havus/image/upload/v1602422857/wadaw/products/CMPS_ugf3tj.png',
+        src: 'https://res.cloudinary.com/havus/image/upload/v1602427568/wadaw/products/CMPS_carousel_xqkjcp.jpg',
       },
       {
         number: 'third',
@@ -80,83 +83,19 @@ export default {
         text: `Many stories of good and bad relationships during the covid-19 pandemic.
         Love in 2020 is the reality of today's relationships that are limited
         by distance and insecurity.`,
-        src: 'https://res.cloudinary.com/havus/image/upload/v1602082303/wadaw/products/LI_qxtpu5.jpg',
+        src: 'https://res.cloudinary.com/havus/image/upload/v1602427568/wadaw/products/LI_carousel_okbjj5.jpg',
       },
     ],
     products: [
       {
-        src: 'https://res.cloudinary.com/havus/image/upload/v1602082303/wadaw/products/LI_qxtpu5.jpg',
+        src: 'https://res.cloudinary.com/havus/image/upload/v1602427840/wadaw/products/LI-large_pi17cl.jpg',
         price: '130',
       },
       {
-        src: 'https://res.cloudinary.com/havus/image/upload/v1602422857/wadaw/products/CMPS_ugf3tj.png',
+        src: 'https://res.cloudinary.com/havus/image/upload/v1602427840/wadaw/products/CMPS_large_xnygrr.jpg',
         price: '130',
       },
     ],
   }),
 };
 </script>
-
-<style lang="scss">
-  #shop {
-    padding-bottom: 200px;
-  }
-  .carousel-item {
-    position: relative;
-    display: flex;
-    width: 100%;
-    height: 100%;
-    justify-content: center;
-    align-items: center;
-
-    .back-img {
-      max-width: 400px;
-    }
-  }
-  .text-theme {
-    position: absolute;
-    align-self: flex-end;
-    justify-self: self-start;
-    left: 0;
-    padding: 30px;
-    z-index: 2;
-    border-radius: 0 15px 15px 0;
-
-    p {
-      max-width: 400px;
-    }
-  }
-
-  .carousel-item.first {
-    background-color: rgb(25, 26, 38);
-  }
-  .carousel-item.second, .carousel-item.third {
-    background-color: white;
-  }
-
-  .first .text-theme {
-    color: white;
-  }
-  .second .text-theme, .third .text-theme {
-    background-color: rgba(51, 48, 67, 0.634);
-    color: white;
-  }
-
-  #products-list {
-    .v-image__image.v-image__image--cover {
-      transition: .5s;
-      background-size: 100%;
-    }
-    .v-image:hover .v-image__image--cover {
-      background-size: 120%;
-    }
-
-    .price {
-      position: absolute;
-      bottom: 15px;
-      left: 15px;
-      background-color: rgba(38, 38, 44, 0.5) !important;
-      color: white !important;
-    }
-  }
-</style>

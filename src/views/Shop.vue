@@ -72,7 +72,7 @@ export default {
         text: `Since covid-19 has become a major problem for all humans are living in this era,
         people around the world have became unproductive, losing inspiration and enthusiasm
         for survive in conditions that force them to stay at home.`,
-        src: 'https://res.cloudinary.com/havus/image/upload/v1602082303/wadaw/products/CMPS_jues7g.jpg',
+        src: 'https://res.cloudinary.com/havus/image/upload/v1602422857/wadaw/products/CMPS_ugf3tj.png',
       },
       {
         number: 'third',

@@ -1,6 +1,6 @@
 <template>
   <div id="landing-page">
-    <div id="hero">
+    <div class="hero">
       <v-container>
         <div id="title" class="mb-3">
           <h3>Wadaw Project</h3>
@@ -9,6 +9,14 @@
           Merangkul orang-orang yang bergerak di bidang seni dan
           memberikan wadah bagi mereka untuk menyalurkan karyanya.
         </p>
+        <v-btn
+          color="blue-grey lighten-5"
+          class="px-10 mt-5"
+          to="/shop"
+        >
+          <font-awesome-icon icon="cart-plus" class="mr-2"/>
+          Shop
+        </v-btn>
       </v-container>
     </div>
 

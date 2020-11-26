@@ -1,10 +1,10 @@
 <template>
   <v-app>
-    <Navbar/>
+    <Navbar v-if="isVisible"/>
     <v-main>
       <router-view></router-view>
     </v-main>
-    <Footer/>
+    <Footer v-if="isVisible"/>
   </v-app>
 </template>
 
@@ -20,6 +20,11 @@ export default {
   data: () => ({
     //
   }),
+  computed: {
+    isVisible() {
+      return !this.$route.path.includes('home');
+    },
+  },
 };
 </script>
 

@@ -19,11 +19,11 @@ const routes = [
     name: 'Shop',
     component: () => import(/* webpackChunkName: "shop" */ '../views/Shop.vue'),
   },
-  // {
-  //   path: '/home',
-  //   name: 'Home',
-  //   component: () => import(/* webpackChunkName: "home" */ '../views/Home.vue'),
-  // },
+  {
+    path: '/home',
+    name: 'Home',
+    component: () => import(/* webpackChunkName: "home" */ '../views/Home.vue'),
+  },
 ];
 
 const router = new VueRouter({

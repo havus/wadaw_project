@@ -18,19 +18,18 @@
       </div>
 
       <div class="navigation-menu">
-        <v-btn large class="border-right">
-          Event
-        </v-btn>
-        <v-btn large>
-          Shop
-        </v-btn>
-        <v-btn large class="border-right">
-          About
-        </v-btn>
-        <v-btn large>
-          Contact
-        </v-btn>
+        <v-btn large>Event</v-btn>
+        <v-btn large>Shop</v-btn>
+        <v-btn large>About</v-btn>
+        <v-btn large>Contact</v-btn>
       </div>
+
+      <footer>
+        <span>
+          &copy; <a href="https://instagram.com/wadaw_project" target="blank">Wadaw Project</a>
+          2020 Made with <font-awesome-icon icon="heart" color="white"/> in Balikpapan
+        </span>
+      </footer>
     </v-container>
   </div>
 </template>
@@ -51,7 +50,7 @@ export default {
     background-position: center;
     height: 100%;
     width: 100%;
-    padding: 100px;
+    padding: 90px;
 
     .container {
       padding-top: 100px;
@@ -165,6 +164,32 @@ export default {
         }
         .v-btn:not(:last-child) {
           border-bottom: 1px solid white;
+        }
+      }
+    }
+
+    footer {
+      color: white;
+      position: absolute;
+      bottom: 0;
+      width: 100%;
+      color: white;
+      padding: 40px;
+      display: flex;
+      font-weight: 300;
+      flex-direction: column;
+      align-items: center;
+      letter-spacing: 1px;
+
+      a {
+        color: white;
+        font-weight: 600;
+        text-decoration: none;
+        border-bottom: 1px dotted white;
+
+        &:hover {
+          text-decoration: none;
+          color: rgba(255, 255, 255, 0.8);
         }
       }
     }

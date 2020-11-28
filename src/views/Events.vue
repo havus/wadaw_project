@@ -12,7 +12,7 @@
           </div>
 
           <div class="content">
-            <h3>Persiapan Hari Pahlawan</h3>
+            <h3 class="title">Persiapan Hari Pahlawan</h3>
 
             <div class="simple-info">
               <font-awesome-icon icon="map-marker-alt" class="mr-2" color="grey"/>

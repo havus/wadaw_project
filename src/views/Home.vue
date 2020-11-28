@@ -53,7 +53,7 @@ export default {
     background-position: center;
     height: 100%;
     width: 100%;
-    padding: 90px;
+    padding: 100px 17px;
 
     .container {
       display: flex;
@@ -104,8 +104,8 @@ export default {
 
       @media only screen and (max-width: 700px) {
         &::after {
-          height: 70px;
-          bottom: -70px;
+          height: $line_height;
+          bottom: -$line_height;
         }
       }
 

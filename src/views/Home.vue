@@ -18,16 +18,16 @@
       </div>
 
       <div class="navigation-menu">
-        <v-btn large>Event</v-btn>
-        <v-btn large>Shop</v-btn>
-        <v-btn large>About</v-btn>
-        <v-btn large>Contact</v-btn>
+        <v-btn to="/events">Events</v-btn>
+        <v-btn>Shop</v-btn>
+        <v-btn>About</v-btn>
+        <v-btn>Contact</v-btn>
       </div>
 
       <footer>
         <span>
           &copy; <a href="https://instagram.com/wadaw_project" target="blank">Wadaw Project</a>
-          2020 Made with <font-awesome-icon icon="heart" color="white"/> in Balikpapan
+          2020 Made with <font-awesome-icon icon="heart" color="#ffffffa4"/> in Balikpapan
         </span>
       </footer>
     </v-container>
@@ -42,6 +42,9 @@ export default {
 
 <style lang="scss">
   #home {
+    $line_height: 60px;
+    $button_height: 45px;
+
     background: linear-gradient(
       rgba(45, 46, 56, 0.8),
       rgba(45, 46, 56, 0.8),
@@ -53,7 +56,6 @@ export default {
     padding: 90px;
 
     .container {
-      padding-top: 100px;
       display: flex;
       flex-direction: column;
       justify-content: center;
@@ -61,30 +63,31 @@ export default {
     }
 
     .logo-wrapper {
-      width: 120px;
-      height: 120px;
-      border-radius: 120px;
+      width: 90px;
+      height: 90px;
+      border-radius: 90px;
       border: 1px solid white;
       display: flex;
       justify-content: center;
       align-items: center;
     }
     .logo {
-      width: 70px;
+      width: 50px;
     }
 
     .content-wrapper {
       position: relative;
-      margin-top: 70px;
+      margin-top: $line_height;
+      max-width: 678px;
 
       &::before {
         content: '';
         display: block;
         position: absolute;
-        top: -70px;
-        left: calc(50%);
+        top: -$line_height;
+        left: calc(50% - 1px);
         width: 1px;
-        height: 70px;
+        height: $line_height;
         background: #ffffff;
       }
 
@@ -92,10 +95,10 @@ export default {
         content: '';
         display: block;
         position: absolute;
-        bottom: -121px;
-        left: calc(50%);
+        bottom: -$line_height - $button_height - 1px;
+        left: calc(50% - 1px);
         width: 1px;
-        height: 120px;
+        height: $line_height + $button_height + 1px;
         background: #ffffff;
       }
 
@@ -114,13 +117,14 @@ export default {
         color: white;
         border-top: 1px solid white;
         border-bottom: 1px solid white;
-        padding: 50px;
+        padding: 40px;
         width: 100%;
       }
 
       h1 {
-        letter-spacing: 3px;
-        margin-bottom: 30px;
+        letter-spacing: 7px;
+        margin-bottom: 10px;
+        font-size: 37px;
       }
 
       p {
@@ -129,22 +133,25 @@ export default {
         text-transform: uppercase;
         letter-spacing: 0.2rem;
         max-width: 720px;
+        font-size: 13px;
       }
     }
 
     .navigation-menu {
       display: flex;
-      margin-top: 70px;
+      margin-top: $line_height;
       border: 1px solid white;
-      border-radius: 3px;
+      border-radius: 5px;
+      overflow: hidden;
 
       .v-btn {
         background-color: transparent;
         color: white;
         border-radius: 0;
-        min-width: 150px;
-        width: 100px;
-        height: 50px;
+        min-width: 120px;
+        height: $button_height;
+        letter-spacing: 3px;
+        font-weight: 400;
 
         &:hover, &:active {
           border-radius: 0;
@@ -176,14 +183,15 @@ export default {
       color: white;
       padding: 40px;
       display: flex;
-      font-weight: 300;
       flex-direction: column;
       align-items: center;
       letter-spacing: 1px;
+      font-weight: 200;
+      font-size: 15px;
 
       a {
         color: white;
-        font-weight: 600;
+        font-weight: 400;
         text-decoration: none;
         border-bottom: 1px dotted white;
 

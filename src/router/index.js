@@ -24,6 +24,16 @@ const routes = [
     name: 'Home',
     component: () => import(/* webpackChunkName: "home" */ '../views/Home.vue'),
   },
+  {
+    path: '/events',
+    name: 'Events',
+    component: () => import(/* webpackChunkName: "home" */ '../views/Events.vue'),
+  },
+  {
+    path: '/event/:eventName',
+    name: 'Event',
+    component: () => import(/* webpackChunkName: "home" */ '../views/Event.vue'),
+  },
 ];
 
 const router = new VueRouter({

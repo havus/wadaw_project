@@ -23,13 +23,6 @@
         <v-btn>About</v-btn>
         <v-btn>Contact</v-btn>
       </div>
-
-      <footer>
-        <span>
-          &copy; <a href="https://instagram.com/wadaw_project" target="blank">Wadaw Project</a>
-          2020 Made with <font-awesome-icon icon="heart" color="#ffffffa4"/> in Balikpapan
-        </span>
-      </footer>
     </v-container>
   </div>
 </template>
@@ -45,14 +38,12 @@ export default {
     $line_height: 60px;
     $button_height: 45px;
 
-    background: linear-gradient(
-      rgba(45, 46, 56, 0.8),
-      rgba(45, 46, 56, 0.8),
-    ), url(../assets/images/batik_2.jpg);
-    background-size: cover;
-    background-position: center;
-    height: 100%;
-    width: 100%;
+    * {
+      font-family: 'Source Sans Pro', -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto',
+        'Oxygen', 'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+        sans-serif;
+    }
+
     padding: 100px 17px;
 
     .container {
@@ -171,33 +162,6 @@ export default {
         }
         .v-btn:not(:last-child) {
           border-bottom: 1px solid white;
-        }
-      }
-    }
-
-    footer {
-      color: white;
-      position: absolute;
-      bottom: 0;
-      width: 100%;
-      color: white;
-      padding: 40px;
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      letter-spacing: 1px;
-      font-weight: 200;
-      font-size: 15px;
-
-      a {
-        color: white;
-        font-weight: 400;
-        text-decoration: none;
-        border-bottom: 1px dotted white;
-
-        &:hover {
-          text-decoration: none;
-          color: rgba(255, 255, 255, 0.8);
         }
       }
     }

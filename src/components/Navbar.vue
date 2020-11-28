@@ -47,21 +47,26 @@ export default {
 };
 </script>
 
-<style>
+<style lang="scss">
   .v-avatar:hover {
     cursor: pointer;
   }
 
   #navbar {
     z-index: 10;
-  }
 
-  #nav-title a {
-    text-decoration: none;
-    color: white;
-  }
+    #nav-title a {
+      font-family: 'Montserrat', -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto',
+      'Oxygen', 'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+      sans-serif;
 
-  #logo {
-    width: 50px;
+      text-decoration: none;
+      color: white;
+      letter-spacing: 1px;
+    }
+
+    #logo {
+      width: 50px;
+    }
   }
 </style>

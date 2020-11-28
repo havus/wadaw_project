@@ -1,32 +1,49 @@
-#event-hari-pahlawan {
-  padding: 100px 20px 130px 20px;
+#event {
+  padding: 100px 20px 100px 20px;
   background-color: #343b54;
   min-height: 100%;
-  color: white;
+  color: rgb(201, 201, 201);
   overflow-y: scroll;
-}
+  letter-spacing: .5px;
 
-p {
-  max-width: 920px;
-}
-#header {
-  margin-top: 20px;
-}
+  .container {
+    background-color: rgba(24, 24, 24, 0.8);
+    border-radius: 7px;
+    padding: 30px 50px;
 
-#reward, #flow, #term {
-  .list-item {
-    margin-left: 20px;
-    display: flex;
+    .v-btn {
+      color: white;
+      letter-spacing: 3px;
+      font-weight: 400;
+      // border: 1px solid white;
+    }
   }
-  .order-number {
-    min-width: 30px;
+
+  p {
+    max-width: 920px;
+  }
+  #header {
+    margin-top: 20px;
+  }
+
+  #reward, #flow, #term {
+    .list-item {
+      margin-left: 20px;
+      display: flex;
+    }
+    .order-number {
+      min-width: 30px;
+      text-align: center;
+    }
+
+    p { margin: 0; }
+  }
+
+  h1, h2, h3 {
+    color: rgb(235, 235, 235);
+  }
+  h2 {
     text-align: center;
+    margin-top: 70px;
   }
-
-  p { margin: 0; }
-}
-
-h2 {
-  text-align: center;
-  margin-top: 70px;
 }

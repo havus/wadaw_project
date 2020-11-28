@@ -39,7 +39,10 @@
 </template>
 
 <script>
+import '@/assets/stylesheets/events.scss';
+
 export default {
+  name: 'Events',
   methods: {
     goEventPage(eventName) {
       this.$router.push(`event/${eventName}`);
@@ -47,102 +50,3 @@ export default {
   },
 };
 </script>
-
-<style lang="scss">
-  #events {
-    padding: 50px 10px 100px;
-    color: white;
-
-    .container {
-      margin-top: 70px;
-      border-radius: 7px;
-      background-color: rgba(24, 24, 24, 0.8);
-      max-width: 920px;
-
-      h1 {
-        letter-spacing: 3px;
-        border-bottom: 1px solid rgb(174, 174, 174);
-        display: inline;
-        margin-left: 30px;
-      }
-
-      .card-wrapper {
-        margin-top: 20px;
-      }
-
-      .card {
-        background-color: #212429;
-        display: flex;
-        position: relative;
-        overflow: hidden;
-        padding: 10px;
-        border-radius: 5px;
-        margin: 10px 0;
-
-        &:first-child {
-          margin-top: 30px;
-        }
-        &:last-child {
-          margin-bottom: 0;
-        }
-
-        &:hover {
-          background-color: #272a30;
-          cursor: pointer;
-        }
-        &:active {
-          background-color: #2b2f35;
-          // cursor: pointer;
-        }
-
-        .period {
-          font-weight: 300;
-          height: 70px;
-          width: 150px;
-          border-radius: 0;
-          display: flex;
-          flex-direction: column;
-          justify-content: center;
-          align-items: center;
-
-          .line {
-            height: 1px;
-            background-color: white;
-            width: 70%;
-          }
-        }
-
-        .cost {
-          margin: 0 20px;
-          display: flex;
-          justify-content: center;
-          align-items: center;
-
-          p { margin: 0; }
-        }
-
-        .content {
-          margin-left: 15px;
-          flex-grow: 1;
-          display: flex;
-          flex-direction: column;
-
-          h3 {
-            letter-spacing: 1px;
-            font-weight: 500;
-            margin-bottom: 10px;
-          }
-
-          .simple-info {
-            display: flex;
-            align-items: center;
-
-            p {
-              color: rgb(165, 165, 165);
-            }
-          }
-        }
-      }
-    }
-  }
-</style>

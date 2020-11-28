@@ -10,21 +10,6 @@ const routes = [
     component: () => import(/* webpackChunkName: "landing" */ '../views/Landing.vue'),
   },
   {
-    path: '/event-hari-pahlawan',
-    name: 'EventHariPahlawan',
-    component: () => import(/* webpackChunkName: "event-hari-pahlawan" */ '../views/EventHariPahlawan.vue'),
-  },
-  {
-    path: '/shop',
-    name: 'Shop',
-    component: () => import(/* webpackChunkName: "shop" */ '../views/Shop.vue'),
-  },
-  {
-    path: '/home',
-    name: 'Home',
-    component: () => import(/* webpackChunkName: "home" */ '../views/Home.vue'),
-  },
-  {
     path: '/events',
     name: 'Events',
     component: () => import(/* webpackChunkName: "home" */ '../views/Events.vue'),
@@ -33,6 +18,11 @@ const routes = [
     path: '/event/:eventName',
     name: 'Event',
     component: () => import(/* webpackChunkName: "home" */ '../views/Event.vue'),
+  },
+  {
+    path: '/shop',
+    name: 'Shop',
+    component: () => import(/* webpackChunkName: "shop" */ '../views/Shop.vue'),
   },
 ];
 

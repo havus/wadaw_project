@@ -1,6 +1,6 @@
 <template>
   <div id="event">
-    <v-container>
+    <v-container v-if="currentEvent">
       <h1>{{ currentEvent.name }}</h1>
       <p id="header">
         {{ currentEvent.header }}
@@ -44,10 +44,17 @@
 </template>
 
 <script>
-import '@/assets/stylesheets/event-hari-pahlawan.scss';
+import '@/assets/stylesheets/event.scss';
 
 export default {
   name: 'Event',
+  beforeCreate() {
+    const whitelistEvent = ['event-hari-pahlawan'];
+
+    if (!whitelistEvent.includes(this.$route.params.eventName)) {
+      this.$router.push('/events');
+    }
+  },
   computed: {
     currentEvent() {
       return this.events[this.$route.params.eventName];

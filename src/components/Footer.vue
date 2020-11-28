@@ -1,8 +1,10 @@
 <template>
   <footer>
+    <span class="mb-1">
+      &copy; <a href="https://instagram.com/wadaw_project" target="blank">Wadaw Project</a> 2020
+    </span>
     <span>
-      &copy; <a href="https://instagram.com/wadaw_project" target="blank">Wadaw Project</a>
-      2020 Made with <font-awesome-icon icon="heart" color="#ffffffa4"/> in Balikpapan
+      Made with <font-awesome-icon icon="heart" color="#ffffffa4"/> in Balikpapan
     </span>
   </footer>
 </template>

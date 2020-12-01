@@ -30,25 +30,25 @@ pnpm-debug.log*
 #   git config --global core.excludesfile '~/.gitignore_global'
 
 # Ignore bundler config.
-/wadaw_server/.bundle
+/server/.bundle
 
 # Ignore all logfiles and tempfiles.
-/wadaw_server/log/*
-/wadaw_server/tmp/*
-!/wadaw_server/log/.keep
-!/wadaw_server/tmp/.keep
+/server/log/*
+/server/tmp/*
+!/server/log/.keep
+!/server/tmp/.keep
 
 # Ignore pidfiles, but keep the directory.
-/wadaw_server/tmp/pids/*
-/!wadaw_server/tmp/pids/
-!/wadaw_server/tmp/pids/.keep
+/server/tmp/pids/*
+/!server/tmp/pids/
+!/server/tmp/pids/.keep
 
 # Ignore uploaded files in development.
-/wadaw_server/storage/*
-!/wadaw_server/storage/.keep
+/server/storage/*
+!/server/storage/.keep
 
-/wadaw_server/public/assets
+/server/public/assets
 .byebug_history
 
 # Ignore master key for decrypting credentials and more.
-/wadaw_server/config/master.key
+/server/config/master.key

@@ -20,7 +20,9 @@ module API
         if new_product.save
           render status: :ok, json: resource_serializer.new(new_product)
         else
-          render status: :unprocessable_entity, json: { error_messages: new_product.errors.messages }
+          render status: :unprocessable_entity, json: {
+            error_messages: new_product.errors.messages
+          }
         end
       end
 
@@ -32,7 +34,9 @@ module API
         if @requested_resource.save
           render status: :ok, json: resource_serializer.new(@requested_resource.reload)
         else
-          render status: :unprocessable_entity, json: { error_messages: @requested_resource.errors.messages }
+          render status: :unprocessable_entity, json: {
+            error_messages: @requested_resource.errors.messages
+          }
         end
       end
 

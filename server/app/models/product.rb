@@ -6,9 +6,11 @@
 # t.integer "batch"
 # t.integer "stock"
 # t.decimal "price", precision: 38, scale: 2, default: "0.0"
+# t.datetime "created_at", precision: 6, null: false
+# t.datetime "updated_at", precision: 6, null: false
 
 class Product < ApplicationRecord
-  validates_presence_of :name, :product_code, :price
+  validates_presence_of :name, :product_code, :batch, :stock
 
   scope :are_batch, -> (batch_number) { where(batch: batch_number) }
 end

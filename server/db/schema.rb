@@ -18,6 +18,8 @@ ActiveRecord::Schema.define(version: 2020_12_02_152445) do
     t.integer "batch"
     t.integer "stock"
     t.decimal "price", precision: 38, scale: 2, default: "0.0"
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
   end
 
 end

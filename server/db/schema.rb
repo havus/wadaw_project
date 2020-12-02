@@ -17,7 +17,7 @@ ActiveRecord::Schema.define(version: 2020_12_02_152445) do
     t.string "product_code"
     t.integer "batch"
     t.integer "stock"
-    t.decimal "price", precision: 38, scale: 2
+    t.decimal "price", precision: 38, scale: 2, default: "0.0"
   end
 
 end

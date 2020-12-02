@@ -10,6 +10,14 @@ module API
 
         "::V1::#{class_name}Serializer".constantize
       end
+
+      def find_resource
+        model_name          = controller_name.singularize.capitalize
+        @requested_resource = model_name.constantize.find params[:id]
+
+      rescue ActiveRecord::RecordNotFound
+        render status: :not_found, json: { error: "#{model_name} not found" }
+      end
     end
   end
 end

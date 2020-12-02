@@ -52,3 +52,5 @@ pnpm-debug.log*
 
 # Ignore master key for decrypting credentials and more.
 /server/config/master.key
+
+/server/coverage

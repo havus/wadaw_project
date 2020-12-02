@@ -18,7 +18,7 @@ module API
         new_product = Product.new(permitted_params)
 
         if new_product.save
-          render status: :ok, json: resource_serializer.new(new_product)
+          render status: :created, json: resource_serializer.new(new_product)
         else
           render status: :unprocessable_entity, json: {
             error_messages: new_product.errors.messages

@@ -16,7 +16,7 @@ module API
         @requested_resource = model_name.constantize.find params[:id]
 
       rescue ActiveRecord::RecordNotFound
-        render status: :not_found, json: { error: "#{model_name} not found" }
+        render status: :not_found, json: { error_message: "#{model_name} not found" }
       end
     end
   end

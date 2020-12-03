@@ -14,7 +14,7 @@ class SalesTransaction < ApplicationRecord
 
   belongs_to :product
 
-  scope :sales_in_month, -> (month, year = Date.today.year) do
+  scope :sales_in_month, -> (month = Date.today.month, year = Date.today.year) do
     start_date  = Date.parse("#{year}/#{month}/1")
     end_date    = start_date.end_of_month
 

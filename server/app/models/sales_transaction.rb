@@ -15,7 +15,7 @@ class SalesTransaction < ApplicationRecord
   belongs_to :product
 
   scope :sales_in_month, -> (month = Date.today.month, year = Date.today.year) do
-    start_date  = Date.parse("#{year}/#{month}/1")
+    start_date  = Date.parse("#{year}-#{month}-01")
     end_date    = start_date.end_of_month
 
     where('transaction_at >= ? AND transaction_at <= ?', start_date, end_date)

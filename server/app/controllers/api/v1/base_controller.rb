@@ -12,7 +12,7 @@ module API
       end
 
       def find_resource
-        model_name          = controller_name.singularize.capitalize
+        model_name          = controller_name.singularize.camelcase
         @requested_resource = model_name.constantize.find params[:id]
 
       rescue ActiveRecord::RecordNotFound

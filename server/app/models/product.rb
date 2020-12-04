@@ -3,6 +3,7 @@
 # This model has the following table columns:
 # t.string "name"
 # t.string "info"
+# t.string "image_url"
 # t.string "product_code"
 # t.integer "batch"
 # t.integer "stock"

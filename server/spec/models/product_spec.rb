@@ -6,6 +6,7 @@ RSpec.describe Product, type: :model do
   describe 'attributes' do
     it { is_expected.to respond_to :name }
     it { is_expected.to respond_to :info }
+    it { is_expected.to respond_to :image_url }
     it { is_expected.to respond_to :product_code }
     it { is_expected.to respond_to :batch }
     it { is_expected.to respond_to :stock }

@@ -97,6 +97,23 @@ RSpec.describe Product, type: :request do
         expect(parsed_body['error_messages']['name']).to include "can't be blank"
       end
     end
+
+    context 'when post with blank params' do
+      before { payload_params.delete(:product) }
+
+      include_examples :should_return_unprocessable_entity_status
+
+      it 'should return error correctly' do
+        request_operation
+
+        parsed_body = JSON.parse(response.body)
+
+        expect(parsed_body['error_messages']['name']).to include "can't be blank"
+        expect(parsed_body['error_messages']['product_code']).to include "can't be blank"
+        expect(parsed_body['error_messages']['batch']).to include "can't be blank"
+        expect(parsed_body['error_messages']['stock']).to include "can't be blank"
+      end
+    end
   end
 
   describe 'request to update a record' do

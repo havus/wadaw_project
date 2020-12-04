@@ -19,7 +19,7 @@ export default {
   },
   computed: {
     isVisibleNavbar() {
-      return this.$route.name !== 'Landing';
+      return this.$route.name !== 'Landing' && this.$route.name !== 'Shop';
     },
     isVisibleFooter() {
       return true;
@@ -35,7 +35,7 @@ export default {
       sans-serif;
   }
 
-  #landing, #events, #event {
+  #landing, #events, #event, #shop {
     background: linear-gradient(
       rgba(45, 46, 56, 0.8),
       rgba(45, 46, 56, 0.8),

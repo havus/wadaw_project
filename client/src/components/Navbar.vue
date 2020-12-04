@@ -17,19 +17,6 @@
 <script>
 export default {
   data: () => ({
-    drawer: false,
-    leftMenus: [
-      {
-        route: '/',
-        text: 'Home',
-        icon: 'home',
-      },
-      {
-        route: '/popular',
-        text: 'Popular Tag',
-        icon: 'star',
-      },
-    ],
     isLogin: false,
   }),
   methods: {

@@ -14,6 +14,7 @@ ActiveRecord::Schema.define(version: 2020_12_03_123004) do
 
   create_table "products", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
     t.string "name"
+    t.string "info"
     t.string "product_code"
     t.integer "batch"
     t.integer "stock"

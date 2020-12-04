@@ -9,6 +9,7 @@ RSpec.describe Product, type: :request do
   let(:model_attribute_keys) do
     %w[
       name
+      info
       product_code
       batch
       stock

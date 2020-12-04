@@ -42,7 +42,7 @@ module API
 
     private
       def permitted_params
-        params.require(:product).permit(:name, :product_code, :batch, :stock, :price)
+        params.require(:product).permit(:name, :product_code, :batch, :stock, :price, :info)
       rescue ActionController::ParameterMissing
         nil
       end

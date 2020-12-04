@@ -18,7 +18,6 @@ RSpec.describe SalesTransaction, type: :model do
     it { is_expected.to validate_presence_of :quantity }
   end
 
-  
   describe 'scopes' do
     describe '#sales_in_month' do
       let_it_be(:first_transaction)   { create(:sales_transaction) }

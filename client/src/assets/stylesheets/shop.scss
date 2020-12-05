@@ -1,8 +1,7 @@
 #shop {
   $line_height: 60px;
 
-  padding-bottom: 150px;
-  padding-top: 50px;
+  padding: 50px 10px 150px;
 
   .container {
     display: flex;
@@ -60,10 +59,6 @@
     }
   }
 
-  .row {
-    width: 100%;
-  }
-
   .v-card {
     height: 100%;
 
@@ -72,7 +67,7 @@
       max-height: 250px;
     }
 
-    @media only screen and (max-width: 700px) {
+    @media only screen and (max-width: 960px) {
       .v-image {
         min-height: 350px;
         max-height: 350px;
@@ -80,6 +75,8 @@
     }
   }
   #products-list {
+    width: 100%;
+
     .v-image__image.v-image__image--cover {
       transition: .5s;
       background-size: 100%;

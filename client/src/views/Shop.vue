@@ -1,32 +1,36 @@
 <template>
   <div id="shop">
-    <div id="products-list">
-      <div class="container pt-10">
-        <div class="logo-wrapper">
-          <div class="logo">
-            <v-img :src="require('./../assets/images/logo-white.png')"/>
-          </div>
+    <div class="container">
+      <div class="logo-wrapper">
+        <div class="logo">
+          <v-img :src="require('./../assets/images/logo-white.png')"/>
         </div>
+      </div>
 
-        <div class="header-wrapper">
-          <div class="header">
-            <h1 class="text-center">Products List</h1>
-          </div>
+      <div class="header-wrapper">
+        <div class="header">
+          <h1 class="text-center">Products List</h1>
         </div>
+      </div>
 
+      <div id="products-list">
         <v-row dense>
           <v-col
-            lg="4" md="6" sm="12"
-            class="pa-3"
-            v-for="(product, index) in products" :key="index"
+            cols="12"
+            sm="12" md="6" lg="4"
+            class="mb-4"
+            v-for="(product, index) in products"
+            :key="index"
           >
             <v-card class="d-flex flex-column">
               <v-img
-                :src="product.src"
+                :src="product.attributes.image_url"
                 class="image-product"
                 gradient="to bottom, rgba(141, 152, 169, 0.1), rgba(35, 37, 49, 0.6)"
               >
-                <v-chip class="price">IDR {{ product.price }}K</v-chip>
+                <v-chip class="price">
+                  IDR {{ Number(product.attributes.price || 0) / 1000 }}K
+                </v-chip>
               </v-img>
 
               <v-card-text>
@@ -44,7 +48,7 @@
                   ></v-rating>
 
                   <div class="grey--text ml-4">
-                    4.5 (413)
+                    4.5 (15)
                   </div>
                 </v-row>
 
@@ -52,14 +56,13 @@
                   {{ product.name }}
                 </div>
 
-                <div>{{ product.content }}</div>
+                <div>{{ product.attributes.info }}</div>
               </v-card-text>
 
               <v-spacer></v-spacer>
 
               <v-card-actions>
-                <p class="ma-0 pl-2">Product Code</p>
-                <!-- <v-btn color="transparent" depressed>DETAIL</v-btn> -->
+                <p class="ma-0 pl-2">{{ product.attributes.product_code }}</p>
 
                 <v-spacer></v-spacer>
 
@@ -80,7 +83,11 @@
 <script>
 import '@/assets/stylesheets/shop.scss';
 
+// MIXINS
+import InternalFetcher from '../mixins/internalFetcher';
+
 export default {
+  mixins: [InternalFetcher],
   data: () => ({
     carouselItems: [
       {
@@ -106,24 +113,11 @@ export default {
         src: 'https://res.cloudinary.com/havus/image/upload/v1602429113/wadaw/products/LI_carousel_oevocg.jpg',
       },
     ],
-    products: [
-      {
-        name: 'Love in 2020',
-        src: 'https://res.cloudinary.com/havus/image/upload/v1602427840/wadaw/products/LI-large_pi17cl.jpg',
-        price: '130',
-        content: `Many stories of good and bad relationships during the covid-19 pandemic.
-          Love in 2020 is the reality of today's relationships that are limited
-          by distance and insecurity.`,
-      },
-      {
-        name: 'Covid makes people stupid',
-        src: 'https://res.cloudinary.com/havus/image/upload/v1602427840/wadaw/products/CMPS_large_xnygrr.jpg',
-        price: '130',
-        content: `Since covid-19 has become a major problem for all humans are living in this era,
-          people around the world have became unproductive, losing inspiration and enthusiasm
-          for survive in conditions that force them to stay at home.`,
-      },
-    ],
+    products: [],
   }),
+  async mounted() {
+    const { data: allProducts } = await this.getAllProducts();
+    this.products = allProducts;
+  },
 };
 </script>

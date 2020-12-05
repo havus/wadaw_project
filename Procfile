@@ -1,0 +1,1 @@
+server: cd server && bundle exec rails server -p 80

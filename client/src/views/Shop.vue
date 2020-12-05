@@ -1,45 +1,68 @@
 <template>
   <div id="shop">
-    <div id="bg-navbar"></div>
-    <v-carousel
-      cycle
-      height="500"
-      show-arrows-on-hover
-      hide-delimiters
-    >
-      <v-carousel-item v-for="item in carouselItems" :key="item.number">
-        <div :class="'carousel-item ' + item.number">
-          <div class="text-theme">
-            <h3>{{ item.title }}</h3>
-            <p>{{ item.text }}</p>
-          </div>
-          <div class="back-img">
-            <v-img :src="item.src"/>
-          </div>
+    <div class="container">
+      <div class="logo-wrapper">
+        <div class="logo">
+          <v-img :src="require('./../assets/images/logo-white.png')"/>
         </div>
-      </v-carousel-item>
-    </v-carousel>
+      </div>
 
-    <div id="products-list">
-      <div class="container pt-10">
-        <h1 class="text-center mb-5">Our Products</h1>
+      <div class="header-wrapper">
+        <div class="header">
+          <h1 class="text-center">Products List</h1>
+        </div>
+      </div>
+
+      <div id="products-list">
         <v-row dense>
           <v-col
-            lg="4" md="6" sm="12"
-            class="pa-3"
-            v-for="(product, index) in products" :key="index"
+            cols="12"
+            sm="12" md="6" lg="4"
+            class="mb-4"
+            v-for="(product, index) in products"
+            :key="index"
           >
-            <v-card>
+            <v-card class="d-flex flex-column">
               <v-img
-                :src="product.src"
+                :src="product.attributes.image_url"
                 class="image-product"
                 gradient="to bottom, rgba(141, 152, 169, 0.1), rgba(35, 37, 49, 0.6)"
               >
-                <v-chip class="price">IDR {{ product.price }}K</v-chip>
+                <v-chip class="price">
+                  IDR {{ Number(product.attributes.price || 0) / 1000 }}K
+                </v-chip>
               </v-img>
 
+              <v-card-text>
+                <v-row
+                  align="center"
+                  class="mx-0"
+                >
+                  <v-rating
+                    :value="4.5"
+                    color="amber"
+                    dense
+                    half-increments
+                    readonly
+                    size="14"
+                  ></v-rating>
+
+                  <div class="grey--text ml-4">
+                    4.5 (15)
+                  </div>
+                </v-row>
+
+                <div class="my-4 subtitle-1">
+                  {{ product.name }}
+                </div>
+
+                <div>{{ product.attributes.info }}</div>
+              </v-card-text>
+
+              <v-spacer></v-spacer>
+
               <v-card-actions>
-                <v-btn color="transparent" depressed>DETAIL</v-btn>
+                <p class="ma-0 pl-2">{{ product.attributes.product_code }}</p>
 
                 <v-spacer></v-spacer>
 
@@ -60,7 +83,11 @@
 <script>
 import '@/assets/stylesheets/shop.scss';
 
+// MIXINS
+import InternalFetcher from '../mixins/internalFetcher';
+
 export default {
+  mixins: [InternalFetcher],
   data: () => ({
     carouselItems: [
       {
@@ -86,16 +113,11 @@ export default {
         src: 'https://res.cloudinary.com/havus/image/upload/v1602429113/wadaw/products/LI_carousel_oevocg.jpg',
       },
     ],
-    products: [
-      {
-        src: 'https://res.cloudinary.com/havus/image/upload/v1602427840/wadaw/products/LI-large_pi17cl.jpg',
-        price: '130',
-      },
-      {
-        src: 'https://res.cloudinary.com/havus/image/upload/v1602427840/wadaw/products/CMPS_large_xnygrr.jpg',
-        price: '130',
-      },
-    ],
+    products: [],
   }),
+  async mounted() {
+    const { data: allProducts } = await this.getAllProducts();
+    this.products = allProducts;
+  },
 };
 </script>

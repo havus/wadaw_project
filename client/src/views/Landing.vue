@@ -19,7 +19,7 @@
 
       <div class="navigation-menu">
         <v-btn to="/events">Events</v-btn>
-        <v-btn>Shop</v-btn>
+        <v-btn to="/shop">Shop</v-btn>
         <v-btn>About</v-btn>
         <v-btn>Contact</v-btn>
       </div>

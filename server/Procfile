@@ -1,1 +1,1 @@
-server: cd server && RAILS_ENV=production bundle exec rails server -p 80
+server: RAILS_ENV=production bundle exec rails server -p 80

@@ -118,7 +118,7 @@ RSpec.describe Product, type: :request do
       end
     end
 
-    context 'when unauthorized' do
+    context 'when request without header Authorization' do
       before { auth_headers.delete(:Authorization) }
 
       include_examples :should_return_unauthorized_status
@@ -174,7 +174,7 @@ RSpec.describe Product, type: :request do
       end
     end
 
-    context 'when unauthorized' do
+    context 'when request without header Authorization' do
       before { auth_headers.delete(:Authorization) }
 
       include_examples :should_return_unauthorized_status

@@ -13,6 +13,14 @@
         </div>
       </div>
 
+      <v-progress-circular
+        v-if="isLoading"
+        :size="50"
+        class="mt-5"
+        color="white"
+        indeterminate
+      ></v-progress-circular>
+
       <div id="products-list">
         <v-row dense>
           <v-col
@@ -89,6 +97,7 @@ import InternalFetcher from '../mixins/internalFetcher';
 export default {
   mixins: [InternalFetcher],
   data: () => ({
+    isLoading: false,
     carouselItems: [
       {
         number: 'first',
@@ -116,8 +125,12 @@ export default {
     products: [],
   }),
   async mounted() {
+    this.isLoading = true;
+
     const { data: allProducts } = await this.getAllProducts();
     this.products = allProducts;
+
+    this.isLoading = false;
   },
 };
 </script>

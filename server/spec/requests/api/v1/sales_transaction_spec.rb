@@ -6,6 +6,7 @@ RSpec.describe SalesTransaction, type: :request do
   let_it_be(:first_sales_transaction) { create(:sales_transaction) }
   let_it_be(:second_sales_transaction) { create(:sales_transaction) }
 
+  let(:auth_headers) { { Authorization: "Bearer #{ENV['TEMP_TOKEN']}" } }
   let(:model_attribute_keys) do
     %w[
       product
@@ -55,7 +56,7 @@ RSpec.describe SalesTransaction, type: :request do
     let_it_be(:first_product) { create(:product, name: 'First Product') }
 
     let(:endpoint_path)     { api_v1_sales_transactions_path }
-    let(:request_operation) { post endpoint_path, params: payload_params }
+    let(:request_operation) { post endpoint_path, params: payload_params, headers: auth_headers }
     let(:payload_params) do
       {
         sales_transaction: {
@@ -117,11 +118,25 @@ RSpec.describe SalesTransaction, type: :request do
         expect(parsed_body['error_messages']['quantity']).to include "can't be blank"
       end
     end
+
+    context 'when request without header Authorization' do
+      before { auth_headers.delete(:Authorization) }
+
+      include_examples :should_return_unauthorized_status
+
+      it 'should return error correctly' do
+        request_operation
+
+        parsed_body = JSON.parse(response.body)
+
+        expect(parsed_body['error_messages']).to eq 'Unauthorized request'
+      end
+    end
   end
 
   describe 'request to update a record' do
     let(:endpoint_path)     { api_v1_sales_transaction_path(first_sales_transaction.id) }
-    let(:request_operation) { put endpoint_path, params: payload_params }
+    let(:request_operation) { put endpoint_path, params: payload_params, headers: auth_headers }
     let(:payload_params) do
       {
         sales_transaction: {
@@ -157,6 +172,20 @@ RSpec.describe SalesTransaction, type: :request do
         parsed_body = JSON.parse(response.body)
 
         expect(parsed_body['error_messages']['customer_name']).to include "can't be blank"
+      end
+    end
+
+    context 'when request without header Authorization' do
+      before { auth_headers.delete(:Authorization) }
+
+      include_examples :should_return_unauthorized_status
+
+      it 'should return error correctly' do
+        request_operation
+
+        parsed_body = JSON.parse(response.body)
+
+        expect(parsed_body['error_messages']).to eq 'Unauthorized request'
       end
     end
   end

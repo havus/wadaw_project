@@ -15,28 +15,36 @@ module API
       end
 
       def create
-        new_product = Product.new(permitted_params)
+        if authorized?
+          new_product = Product.new(permitted_params)
 
-        if new_product.save
-          render status: :created, json: resource_serializer.new(new_product)
+          if new_product.save
+            render status: :created, json: resource_serializer.new(new_product)
+          else
+            render status: :unprocessable_entity, json: {
+              error_messages: new_product.errors.messages
+            }
+          end
         else
-          render status: :unprocessable_entity, json: {
-            error_messages: new_product.errors.messages
-          }
+          render status: :unauthorized, json: { error_messages: 'Unauthorized request' }
         end
       end
 
       def update
-        valid_params = permitted_params.reject { |value| value.blank? }
+        if authorized?
+          valid_params = permitted_params.reject { |value| value.blank? }
 
-        @requested_resource.assign_attributes(valid_params)
-        # TODO: add audit comment here
-        if @requested_resource.save
-          render status: :ok, json: resource_serializer.new(@requested_resource.reload)
+          @requested_resource.assign_attributes(valid_params)
+          # TODO: add audit comment here
+          if @requested_resource.save
+            render status: :ok, json: resource_serializer.new(@requested_resource.reload)
+          else
+            render status: :unprocessable_entity, json: {
+              error_messages: @requested_resource.errors.messages
+            }
+          end
         else
-          render status: :unprocessable_entity, json: {
-            error_messages: @requested_resource.errors.messages
-          }
+          render status: :unauthorized, json: { error_messages: 'Unauthorized request' }
         end
       end
 

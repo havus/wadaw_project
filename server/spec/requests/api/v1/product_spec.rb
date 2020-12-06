@@ -6,6 +6,7 @@ RSpec.describe Product, type: :request do
   let_it_be(:first_product) { create(:product, name: 'First Product') }
   let_it_be(:second_product) { create(:product, name: 'Second Product') }
 
+  let(:auth_headers) { { Authorization: "Bearer #{ENV['TEMP_TOKEN']}" } }
   let(:model_attribute_keys) do
     %w[
       name
@@ -55,7 +56,7 @@ RSpec.describe Product, type: :request do
 
   describe 'request to create a record' do
     let(:endpoint_path)     { api_v1_products_path }
-    let(:request_operation) { post endpoint_path, params: payload_params }
+    let(:request_operation) { post endpoint_path, params: payload_params, headers: auth_headers }
     let(:payload_params) do
       {
         product: {
@@ -116,11 +117,25 @@ RSpec.describe Product, type: :request do
         expect(parsed_body['error_messages']['stock']).to include "can't be blank"
       end
     end
+
+    context 'when request without header Authorization' do
+      before { auth_headers.delete(:Authorization) }
+
+      include_examples :should_return_unauthorized_status
+
+      it 'should return error correctly' do
+        request_operation
+
+        parsed_body = JSON.parse(response.body)
+
+        expect(parsed_body['error_messages']).to eq 'Unauthorized request'
+      end
+    end
   end
 
   describe 'request to update a record' do
     let(:endpoint_path)     { api_v1_product_path(first_product.id) }
-    let(:request_operation) { put endpoint_path, params: payload_params }
+    let(:request_operation) { put endpoint_path, params: payload_params, headers: auth_headers }
     let(:payload_params) do
       {
         product: {
@@ -156,6 +171,20 @@ RSpec.describe Product, type: :request do
         parsed_body = JSON.parse(response.body)
 
         expect(parsed_body['error_messages']['name']).to include "can't be blank"
+      end
+    end
+
+    context 'when request without header Authorization' do
+      before { auth_headers.delete(:Authorization) }
+
+      include_examples :should_return_unauthorized_status
+
+      it 'should return error correctly' do
+        request_operation
+
+        parsed_body = JSON.parse(response.body)
+
+        expect(parsed_body['error_messages']).to eq 'Unauthorized request'
       end
     end
   end

@@ -18,6 +18,11 @@ module API
       rescue ActiveRecord::RecordNotFound
         render status: :not_found, json: { error_message: "#{model_name} not found" }
       end
+
+      def authorized?
+        bearer_token = request.headers['Authorization']&.gsub('Bearer ', '')
+        bearer_token == ENV['TEMP_TOKEN']
+      end
     end
   end
 end

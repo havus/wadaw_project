@@ -43,6 +43,7 @@ export default {
     background-size: cover;
     background-position: center;
     background-attachment: fixed;
+    background-repeat: repeat-y;
     height: 100%;
     width: 100%;
   }

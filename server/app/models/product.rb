@@ -14,5 +14,6 @@
 class Product < ApplicationRecord
   validates_presence_of :name, :product_code, :batch, :stock
 
+  scope :from_newest, -> { order(id: 'desc') }
   scope :are_batch, -> (batch_number) { where(batch: batch_number) }
 end

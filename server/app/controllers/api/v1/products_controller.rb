@@ -7,7 +7,7 @@ module API
       skip_before_action :verify_authenticity_token, only: [:create, :update]
 
       def index
-        render status: :ok, json: resource_serializer.new(Product.all)
+        render status: :ok, json: resource_serializer.new(Product.from_newest)
       end
 
       def show

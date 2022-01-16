@@ -1,7 +1,8 @@
 <template>
-  <div class="bg-white min-h-screen">
+  <div class="bg-white min-h-screen relative">
     <Navbar />
     <Nuxt />
+    <Footer />
   </div>
 </template>
 

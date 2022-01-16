@@ -33,16 +33,22 @@ export default {
     '@nuxtjs/eslint-module',
     // https://go.nuxtjs.dev/tailwindcss
     '@nuxtjs/tailwindcss',
-    // https://www.npmjs.com/package/@nuxtjs/fontawesome
-    '@nuxtjs/fontawesome'
+    // https://github.com/nuxt-community/fontawesome-module#readme
+    '@nuxtjs/fontawesome',
+    // https://google-fonts.nuxtjs.org/setup/
+    '@nuxtjs/google-fonts',
   ],
 
   fontawesome: {
     icons: {
-      solid: ['faHome', 'faUsers', 'faCogs', 'faQuoteRight'],
-      regular: ['faLightbulb']
-      // <i class="far fa-lightbulb"></i>
-    }
+      solid: ['faHome', 'faUsers', 'faCogs', 'faQuoteRight', 'faChevronRight', 'faBars', 'faHeart'],
+      regular: ['faLightbulb'],
+      brands: ['faReact'],
+    },
+  },
+
+  googleFonts: {
+    families: ['Playfair+Display'],
   },
 
   // Modules: https://go.nuxtjs.dev/config-modules

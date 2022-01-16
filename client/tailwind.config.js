@@ -1,3 +1,4 @@
+
 module.exports = {
   theme: {
     extend: {
@@ -8,6 +9,9 @@ module.exports = {
         'gray-blue': {
           50: '#F6F8FC',
         },
+      },
+      fontFamily: {
+        'playfair-display': ['Playfair-Display'],
       },
       // minHeight: (theme) => ({
       //   ...theme('spacing'),

@@ -15,7 +15,7 @@
     </div>
 
     <!-- Gain More Experience with Us -->
-    <div class="bg-white container mx-auto">
+    <div class="bg-white container mx-auto px-5">
       <h2 class="text-3xl text-center font-semibold bg-test-50 my-12">
         Gain More Experience with Us
       </h2>
@@ -39,7 +39,7 @@
                 </h3>
               </div>
 
-              <p class="font-light">
+              <p class="font-light text-center lg:text-left">
                 {{ experience.text }}
               </p>
             </div>

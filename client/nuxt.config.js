@@ -33,7 +33,17 @@ export default {
     '@nuxtjs/eslint-module',
     // https://go.nuxtjs.dev/tailwindcss
     '@nuxtjs/tailwindcss',
+    // https://www.npmjs.com/package/@nuxtjs/fontawesome
+    '@nuxtjs/fontawesome'
   ],
+
+  fontawesome: {
+    icons: {
+      solid: ['faHome', 'faUsers', 'faCogs', 'faQuoteRight'],
+      regular: ['faLightbulb']
+      // <i class="far fa-lightbulb"></i>
+    }
+  },
 
   // Modules: https://go.nuxtjs.dev/config-modules
   modules: [

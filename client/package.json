@@ -12,6 +12,7 @@
     "lintfix": "yarn lint:js --fix"
   },
   "dependencies": {
+    "@fortawesome/free-regular-svg-icons": "^5.15.4",
     "@nuxtjs/axios": "^5.13.6",
     "@nuxtjs/pwa": "^3.3.5",
     "core-js": "^3.19.3",
@@ -23,8 +24,11 @@
   },
   "devDependencies": {
     "@babel/eslint-parser": "^7.16.3",
+    "@fortawesome/free-brands-svg-icons": "^5.15.4",
+    "@fortawesome/free-solid-svg-icons": "^5.15.4",
     "@nuxtjs/eslint-config": "^8.0.0",
     "@nuxtjs/eslint-module": "^3.0.2",
+    "@nuxtjs/fontawesome": "^1.1.2",
     "@nuxtjs/tailwindcss": "^4.2.1",
     "eslint": "^8.4.1",
     "eslint-plugin-nuxt": "^3.1.0",

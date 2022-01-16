@@ -1,18 +1,27 @@
 module.exports = {
   root: true,
   env: {
+    browser: true,
     node: true,
   },
-  extends: [
-    'plugin:vue/essential',
-    '@vue/airbnb',
-  ],
   parserOptions: {
-    parser: 'babel-eslint',
+    parser: '@babel/eslint-parser',
+    requireConfigFile: false,
   },
+  extends: [
+    '@nuxtjs',
+    'plugin:nuxt/recommended',
+  ],
+  plugins: [
+  ],
+  // add your custom rules here
   rules: {
-    'no-console': process.env.NODE_ENV === 'production' ? 'warn' : 'off',
-    'no-debugger': process.env.NODE_ENV === 'production' ? 'warn' : 'off',
-    'import/no-extraneous-dependencies': ['error', { devDependencies: true }],
+    'space-before-function-paren': ['error', 'never'],
+    semi: ['error', 'always'],
+    'comma-dangle': ['error', 'always-multiline'],
+    'vue/max-attributes-per-line': ['error', {
+      singleline: { max: 3 },
+      multiline: { max: 3 },
+    }],
   },
 };

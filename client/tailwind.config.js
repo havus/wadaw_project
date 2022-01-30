@@ -11,6 +11,7 @@ module.exports = {
         },
       },
       fontFamily: {
+        'quicksand': ['Quicksand', 'sans'],
         'playfair-display': ['Playfair-Display'],
       },
       // minHeight: (theme) => ({

@@ -3,10 +3,10 @@
     <div class="bg-gray-blue-50 py-12">
       <div class="container p-8 lg:px-32 mx-auto min-h-96 flex flex-wrap flex-col items-center lg:flex-row justify-center lg:justify-between">
         <div class="max-w-112 h-full mt-12 lg:my-auto lg:pr-7 order-last lg:order-first">
-          <h1 class="text-4xl mb-5 font-semibold bg-test-50">
+          <h1 class="text-4xl mb-5 font-bold bg-test-50">
             Wadaw Project
           </h1>
-          <p class="font-light">
+          <p class="tracking-wide">
             Embracing people in all fields by providing a platform for them to make their ideas happen.
             Help realize ideas without take their copyright.
           </p>
@@ -19,7 +19,7 @@
     <!-- Gain More Experience with Us -->
     <div class="bg-white">
       <div class="container p-8 mx-auto">
-        <h2 class="text-3xl text-center font-semibold bg-test-50 my-12">
+        <h2 class="text-3xl text-center font-semibold bg-test-50 mt-12 mb-10">
           Gain More Experience with Us
         </h2>
 
@@ -31,15 +31,13 @@
             <div class="w-full">
               <div class="p-5">
                 <div class="flex flex-col items-center">
-                  <!-- bg-white rounded-full filter drop-shadow-lg border-yellow-500 flex flex-col justify-between -->
-                  <!-- <div class="w-16 h-16 border rounded-full border-yellow-500 flex justify-center items-center"> -->
                   <div class="w-16 h-16 bg-white rounded-full filter drop-shadow-md flex justify-center items-center">
                     <div class="text-3xl text-yellow-500">
                       <FontAwesomeIcon :icon="experience.icon" />
                     </div>
                   </div>
 
-                  <h3 class="text-2xl mt-3 mb-2">
+                  <h3 class="text-2xl mt-3 mb-2 font-medium">
                     {{ experience.title }}
                   </h3>
                 </div>

@@ -21,6 +21,8 @@ export default {
     ],
     link: [
       { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' },
+      { rel: 'dns-prefetch', href: 'https://fonts.gstatic.com/' },
+      { rel: 'preconnect', href: 'https://fonts.googleapis.com/', crossorigin: true },
     ],
   },
 
@@ -56,7 +58,10 @@ export default {
   },
 
   googleFonts: {
-    families: ['Playfair+Display'],
+    families: {
+      Quicksand: [300, 400, 500, 600, 700],
+      PlayfairDisplay: true,
+    }
   },
 
   // Modules: https://go.nuxtjs.dev/config-modules
@@ -92,6 +97,10 @@ export default {
     manifest: {
       lang: 'en',
     },
+  },
+
+  tailwindcss: {
+    jit: true
   },
 
   // Build Configuration: https://go.nuxtjs.dev/config-build

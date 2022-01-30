@@ -15,7 +15,7 @@
           <NuxtLink
             v-for="(link, i) in links" :key="i"
             :to="link.path"
-            class="font-semibold text-gray-600 no-underline block p-2 pl-0 md:inline-block"
+            class="font-semibold text-gray-600 no-underline block p-2 pl-0 pr-3 md:inline-block"
             @click.native="toggle"
           >
             {{ link.text }}

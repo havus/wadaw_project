@@ -62,7 +62,7 @@
       <div class="container p-8 lg:px-32 mx-auto flex flex-wrap">
         <div
           v-for="(quote, i) in quotes" :key="i"
-          class="p-14 pt-0 lg:p-12 xl:p-5 w-full lg:w-1/2 xl:w-1/3 mx-auto"
+          class="w-full lg:w-1/2 xl:w-1/3 mx-auto mb-12 lg:p-4"
         >
           <div class="bg-white px-14 py-5 rounded-md relative filter drop-shadow-lg flex flex-col justify-between">
             <div

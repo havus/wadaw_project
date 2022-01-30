@@ -4,12 +4,20 @@ export default {
 
   // Global page headers: https://go.nuxtjs.dev/config-head
   head: {
-    title: 'wadaw',
+    title: 'Wadaw Project',
     meta: [
       { charset: 'utf-8' },
       { name: 'viewport', content: 'width=device-width, initial-scale=1' },
-      { hid: 'description', name: 'description', content: '' },
       { name: 'format-detection', content: 'telephone=no' },
+
+      // see: https://search.google.com/
+      { name: 'google-site-verification', content: 'LtLPMrAnYArIUDyhgDZLDfnlYrCqRXy-yvb7oSUr3RE' },
+
+      { hid: 'og:url', name: 'og:url', content: 'https://wadaw.id' },
+      { hid: 'og:title', name: 'og:title', content: 'Wadaw Project' },
+
+      { hid: 'description', name: 'description', content: 'Embracing people in all fields by providing a platform for them to make their ideas happen. Help realize ideas without take their copyright.' },
+      { hid: 'og:description', name: 'og:description', content: 'Embracing people in all fields by providing a platform for them to make their ideas happen. Help realize ideas without take their copyright.' },
     ],
     link: [
       { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' },
@@ -57,7 +65,21 @@ export default {
     '@nuxtjs/axios',
     // https://go.nuxtjs.dev/pwa
     '@nuxtjs/pwa',
+    // https://github.com/nuxt-community/gtm-module
+    '@nuxtjs/gtm',
   ],
+
+  gtm: {
+    id: process.env.GOOGLE_TAG_MANAGER_ID, // https://tagmanager.google.com/
+  },
+  publicRuntimeConfig: {
+    gtm: {
+      id: process.env.GOOGLE_TAG_MANAGER_ID,
+    },
+  },
+  privateRuntimeConfig: {
+    // apiSecret: some secret stuff..
+  },
 
   // Axios module configuration: https://go.nuxtjs.dev/config-axios
   axios: {

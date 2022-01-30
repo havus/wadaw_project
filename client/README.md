@@ -1,4 +1,4 @@
-# wadaw
+# Wadaw Project
 
 ## Build Setup
 

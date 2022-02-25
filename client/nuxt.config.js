@@ -51,7 +51,10 @@ export default {
 
   fontawesome: {
     icons: {
-      solid: ['faHome', 'faUsers', 'faCogs', 'faQuoteRight', 'faChevronRight', 'faBars', 'faHeart'],
+      solid: [
+        'faHome', 'faUsers', 'faCogs', 'faQuoteRight', 'faChevronRight', 'faBars', 'faHeart',
+        'faArrowCircleRight'
+      ],
       regular: ['faLightbulb'],
       brands: ['faReact'],
     },
@@ -61,7 +64,7 @@ export default {
     families: {
       Quicksand: [300, 400, 500, 600, 700],
       PlayfairDisplay: true,
-    }
+    },
   },
 
   // Modules: https://go.nuxtjs.dev/config-modules
@@ -100,7 +103,7 @@ export default {
   },
 
   tailwindcss: {
-    jit: true
+    jit: true,
   },
 
   // Build Configuration: https://go.nuxtjs.dev/config-build

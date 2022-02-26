@@ -103,7 +103,10 @@
           So, here we are. To build the MVP.
         </p>
 
-        <Button class="mt-5" to="/" variant="blue">
+        <Button
+          class="mt-5" to="/" variant="blue"
+          rounded
+        >
           Contact Us
           <span class="ml-2">
             <FontAwesomeIcon :icon="['fas', 'chevron-right']" />

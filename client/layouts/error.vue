@@ -16,7 +16,10 @@
               Sorry, this page isn't available!
             </h1>
 
-            <Button class="mt-5" to="/" variant="grey">
+            <Button
+              class="mt-5" to="/" variant="gray"
+              rounded
+            >
               Home page
               <span class="ml-2">
                 <FontAwesomeIcon :icon="['fas', 'arrow-circle-right']" />

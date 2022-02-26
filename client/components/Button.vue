@@ -1,11 +1,9 @@
 
 <template>
   <NuxtLink
-    :to="to" :class="`py-2 px-5 inline-flex items-center rounded text-sm font-semibold focus:outline-none
-    text-${currentVariant.textColor}
-    bg-${currentVariant.backgroundColor}
-    hover:bg-${currentVariant.backgroundColorHover}
-    focus:ring focus:ring-${currentVariant.ringColor}`"
+    :to="to"
+    :class="`py-2 px-5 inline-flex items-center rounded text-sm font-semibold focus:outline-none focus:ring
+    ${currentVariant} ${rounded && 'rounded-full'}`"
   >
     <slot />
   </NuxtLink>
@@ -25,22 +23,13 @@ export default {
       required: false,
       default: 'blue',
     },
+    rounded: Boolean,
   },
   data() {
     return {
       variantList: {
-        blue: {
-          textColor: 'white',
-          backgroundColor: 'blue-500',
-          backgroundColorHover: 'blue-600',
-          ringColor: 'blue-200',
-        },
-        grey: {
-          textColor: 'white',
-          backgroundColor: 'gray-700',
-          backgroundColorHover: 'gray-800',
-          ringColor: 'gray-200',
-        },
+        blue: 'text-white bg-blue-500 hover:bg-blue-600 focus:ring-blue-200',
+        gray: 'text-white bg-gray-700 hover:bg-gray-800 focus:ring-gray-200',
       },
     };
   },

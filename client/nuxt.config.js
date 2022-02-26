@@ -57,9 +57,9 @@ export default {
     icons: {
       solid: [
         'faHome', 'faUsers', 'faCogs', 'faQuoteRight', 'faChevronRight', 'faBars', 'faHeart',
-        'faArrowCircleRight'
+        'faArrowCircleRight', 'faLaptopCode'
       ],
-      regular: ['faLightbulb'],
+      regular: ['faLightbulb', 'faHandPeace'],
       brands: ['faReact'],
     },
   },

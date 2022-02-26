@@ -1,5 +1,7 @@
 <template>
-  <h1>Projects page</h1>
+  <div class="py-12">
+    <Maintenance />
+  </div>
 </template>
 
 <script>

@@ -103,15 +103,12 @@
           So, here we are. To build the MVP.
         </p>
 
-        <button
-          class="py-2 px-5 rounded-full flex items-center mt-5 text-sm font-semibold
-          text-white bg-blue-500 hover:bg-blue-600 focus:outline-none focus:ring focus:ring-blue-200"
-        >
-          <span class="inline">Contact Us</span>
-          <div class="ml-2">
+        <Button class="mt-5" to="/" variant="blue">
+          Contact Us
+          <span class="ml-2">
             <FontAwesomeIcon :icon="['fas', 'chevron-right']" />
-          </div>
-        </button>
+          </span>
+        </Button>
       </div>
     </div>
   </div>

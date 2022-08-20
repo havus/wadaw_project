@@ -1,8 +1,8 @@
 <!-- Please remove this file from your project -->
 <template>
-  <header class="bg-gray-blue-50 fixed z-50 w-full">
-    <div class="container px-8 lg:px-32 mx-auto flex items-center justify-between flex-wrap py-2">
-      <img :src="wadawLogo" class="max-h-9 mr-3 -ml-3" alt="Wadaw logo">
+  <header class="bg-gray-blue-900 py-2 fixed z-50 w-full">
+    <div class="container mx-auto flex items-center justify-between flex-wrap">
+      <img :src="wadawLogo" class="max-h-9 mr-9" alt="Wadaw logo">
 
       <div class="block md:hidden">
         <button class="flex items-center px-3 py-2 border rounded border-gray-400 text-gray-400" @click="toggle">
@@ -11,11 +11,11 @@
       </div>
 
       <div :class="open ? 'block': 'hidden'" class="w-full flex-grow md:flex md:items-center md:w-auto">
-        <div class="text-sm md:flex-grow">
+        <div class="text-sm md:flex-grow first:mt-3 md:first:mt-0">
           <NuxtLink
             v-for="(link, i) in links" :key="i"
             :to="link.path"
-            class="font-semibold text-gray-600 no-underline block p-2 pl-0 pr-3 md:inline-block"
+            class="text-gray-100 tracking-wider no-underline block p-2 pl-0 pr-9 md:inline-block"
             @click.native="toggle"
           >
             {{ link.text }}

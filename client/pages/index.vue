@@ -1,64 +1,191 @@
 <template>
-  <div class="text-gray-600">
-    <div class="bg-gray-blue-50 py-12">
-      <div class="container p-8 lg:px-32 mx-auto min-h-96 flex flex-wrap flex-col items-center lg:flex-row justify-center lg:justify-between">
-        <div class="max-w-112 h-full mt-12 lg:my-auto lg:pr-7 order-last lg:order-first">
-          <h1 class="text-4xl mb-5 font-bold bg-test-50">
-            Wadaw Project
+  <div class="text-gray-blue-900">
+    <div class="bg-gray-blue-900 py-12">
+      <div class="container mx-auto flex flex-wrap flex-col lg:flex-row justify-center lg:justify-between lg:mt-24 lg:mb-20 px-10">
+        <div id="main-title" class="text-white max-w-112">
+          <!-- <h1 class="text-2xl font-medium tracking-wider">
+            <span class="text-4xl font-bold text-orange-300">W</span>ell-being
           </h1>
-          <p class="tracking-wide">
-            Embracing people in all fields by providing a platform for them to make their ideas happen.
-            Help realize ideas without take their copyright.
-          </p>
+
+          <h1 class="text-2xl font-medium tracking-wider">
+            <span class="text-4xl font-bold text-orange-300">A</span>mbition
+          </h1>
+
+          <h1 class="text-2xl font-medium tracking-wider">
+            <span class="text-4xl font-bold text-orange-300">D</span>desire
+          </h1>
+
+          <h1 class="text-2xl font-medium tracking-wider">
+            <span class="text-4xl font-bold text-orange-300">A</span>ccuration
+          </h1>
+
+          <h1 class="text-2xl font-medium tracking-wider">
+            <span class="text-4xl font-bold text-orange-300">W</span>orthwhile
+          </h1> -->
+
+          <h1 class="text-4xl font-bold tracking-wide">
+            <!-- <span class="text-orange-300">W</span>ild -->
+            <VueTyper
+              text="Wild"
+              :repeat="0"
+              :shuffle="false"
+              initial-action="typing"
+              :pre-type-delay="2000"
+              :type-delay="30"
+              :erase-on-complete="false"
+              caret-animation="phase"
+            />
+            <!-- end 2000 + (30*4) = 2120 -->
+          </h1>
+
+          <h1 class="text-4xl font-bold tracking-wide">
+            <!-- <span class="text-orange-300">A</span>mbition -->
+            <VueTyper
+              text="Ambition"
+              :repeat="0"
+              :shuffle="false"
+              initial-action="typing"
+              :pre-type-delay="2120"
+              :type-delay="30"
+              :erase-on-complete="false"
+              caret-animation="phase"
+            />
+            <!-- end 2120 + (30*8) = 2360 -->
+          </h1>
+
+          <h1 class="text-4xl font-bold tracking-wide">
+            <!-- <span class="text-orange-300">D</span>iscover -->
+            <VueTyper
+              text="Discover"
+              :repeat="0"
+              :shuffle="false"
+              initial-action="typing"
+              :pre-type-delay="2360"
+              :type-delay="30"
+              :erase-on-complete="false"
+              caret-animation="phase"
+            />
+            <!-- end 2360 + (30*8) = 2600 -->
+          </h1>
+
+          <h1 class="text-4xl font-bold tracking-wide">
+            <!-- an <span class="text-orange-300">A</span>mazing -->
+            <VueTyper
+              text="an Amazing"
+              :repeat="0"
+              :shuffle="false"
+              initial-action="typing"
+              :pre-type-delay="2600"
+              :type-delay="30"
+              :erase-on-complete="false"
+              caret-animation="phase"
+            />
+            <!-- end 2600 + (30*10) = 2900 -->
+          </h1>
+
+          <h1 class="text-4xl font-bold tracking-wide">
+            <!-- <span class="text-orange-300">W</span>ay -->
+            <!-- open at 2.9s -->
+            <VueTyper
+              text="Way..."
+              :repeat="Infinity"
+              :shuffle="false"
+              initial-action="erasing"
+              :pre-type-delay="1100"
+              :type-delay="300"
+              :pre-erase-delay="1500"
+              :erase-delay="150"
+              erase-style="select-all"
+              :erase-on-complete="true"
+              caret-animation="phase"
+            />
+            <!-- end 2900 + (300*6) = 4700 -->
+          </h1>
+
+          <div class="mt-9 w-36 h-1 bg-orange-300 rounded-full" />
+
+          <div class="tracking-wider mt-3 text-gray-200 font-extralight animate-scoll-fade-in-out">
+            <b class="font-bold text-white">WADAW - Playground for developing creativity.</b>
+            <p>
+              We embracing people in all fields by providing a platform for them to make their ideas happen.
+              Help realize ideas without take their copyright.
+            </p>
+          </div>
         </div>
 
-        <img :src="wadawChipset" class="mt-10 lg:mt-0 max-h-60 lg:max-h-80" alt="Wadaw chipset">
+        <img :src="wadawChipset" class="mt-10 p-5 sm:p-0 max-h-96 mx-auto my-7 lg:my-0 lg:mr-0 lg:max-h-96 order-first lg:order-last animate-pulse" alt="Wadaw chipset">
       </div>
     </div>
 
     <!-- Gain More Experience with Us -->
-    <div class="bg-white">
-      <div class="container p-8 mx-auto">
-        <h2 class="text-3xl text-center font-semibold bg-test-50 mt-12 mb-10">
-          Gain More Experience with Us
-        </h2>
-
-        <div class="lg:px-28 flex flex-wrap justify-center lg:justify-start">
-          <div
-            v-for="(experience, i) in experiences" :key="i"
-            class="lg:w-1/2 xl:w-1/3 lg:mx-auto my-5 lg:my-3"
-          >
-            <div class="w-full">
-              <div class="p-5">
-                <div class="flex flex-col items-center">
-                  <div class="w-16 h-16 bg-white rounded-full filter drop-shadow-md flex justify-center items-center">
-                    <div class="text-3xl text-yellow-500">
-                      <FontAwesomeIcon :icon="experience.icon" />
-                    </div>
-                  </div>
-
-                  <h3 class="text-2xl mt-3 mb-2 font-medium">
-                    {{ experience.title }}
-                  </h3>
+    <div class="bg-white my-20">
+      <div class="container p-8 mx-auto flex justify-center">
+        <div class="grid grid-cols-1 lg:grid-cols-2 justify-items-center gap-7">
+          <div class="grid grid-cols-1 md:grid-cols-2 justify-items-center gap-4 w-full order-2 lg:order-1">
+            <div
+              v-scollanimation
+              v-for="(experience, i) in experiences" :key="i"
+              class="flex flex-col rounded border-1 p-5 w-full items-center lg:items-start"
+            >
+              <div class="w-12 h-12 bg-orange-100 rounded-full flex justify-center items-center">
+                <div class="text-3xl text-orange-300">
+                  <FontAwesomeIcon :icon="experience.icon" size="xs" />
                 </div>
-
-                <p class="font-light text-center">
-                  {{ experience.text }}
-                </p>
               </div>
+
+              <h1 class="text-xl font-bold text-gray-blue-800 mt-2 text-center lg:text-left">
+                {{ experience.title }}
+              </h1>
+
+              <p class="font-extralight mt-2 max-w-48 text-gray-blue-700 text-center lg:text-left">
+                {{ experience.text }}
+              </p>
             </div>
+          </div>
+
+          <div class="flex flex-col justify-center pb-28 order-1 lg:order-2">
+            <h1 class="text-3xl font-semibold">
+              <span class="text-orange-300 underline underline-offset-8">We</span>
+              make a good shit!
+            </h1>
+
+            <p class="font-extralight mt-2 max-w-96">
+              Sometimes we need to think outside the box,
+              to find out anti-mainstream way to solve a problem.
+              Creative and critical thinking bring us to think different.
+              Deep dive and discover The Real Problem,
+              what customer needs. Gathering a list of ideas
+              then brainstorming.
+            </p>
           </div>
         </div>
       </div>
     </div>
 
-    <div class="container mx-auto flex justify-center">
-      <div class="w-112 h-0.5 bg-gradient-to-r from-white via-gray-200 to-white my-20" />
+    <div class="bg-gray-blue-900 py-20 mx-auto">
+      <div class="container mx-auto flex flex-col">
+        <img :src="target" class="max-h-28 mx-auto animate-pulse">
+
+        <h1 class="text-white mt-5 text-4xl font-bold mx-auto text-center tracking-wide">
+          Build whatever<br>from your <span class="text-orange-300">creative</span> idea
+        </h1>
+
+        <p class="text-gray-200 mt-9 mx-auto text-center leading-7 tracking-wide" style="max-width: 37rem;">
+          Turning a creative Idea to a business. Figure out what problem is being solved. Find your market. Find your support, have you ever noticed how many creative ideas are growing to be even bigger now? Brave to start something, use failure as a way to discover your strength.
+          <br>Be a <span class="text-orange-300 font-bold">Risk-Taker!</span>
+        </p>
+      </div>
     </div>
 
-    <div class="bg-gray-blue-50 bg-gradient-to-b from-white">
+    <!-- Quotes - start -->
+    <!-- <div class="container mx-auto flex justify-center">
+      <div class="w-112 h-0.5 bg-gradient-to-r from-white via-gray-200 to-white my-20" />
+    </div> -->
+
+    <div class="bg-gray-blue-50 bg-gradient-to-b from-white py-40">
       <div class="container p-8 lg:px-32 mx-auto flex flex-wrap">
         <div
+          v-scollanimation
           v-for="(quote, i) in quotes" :key="i"
           class="w-full lg:w-1/2 xl:w-1/3 mx-auto mb-12 lg:p-4"
         >
@@ -82,64 +209,42 @@
         </div>
       </div>
     </div>
-
-    <div class="bg-gray-blue-50 min-h-96">
-      <div class="container p-8 lg:px-32 mx-auto pb-56 md:pb-56 lg:p-32 lg:pb-56 flex flex-col items-start">
-        <div class="h-16 w-16 rounded-full flex items-center justify-center border border-gray-400">
-          <div class="bg-blue-300 rounded-full h-14 w-14 text-4xl text-white flex items-center justify-center">
-            <FontAwesomeIcon :icon="['fab', 'react']" />
-          </div>
-        </div>
-
-        <span class="font-semibold text-blue-400 mt-6">Build anything</span>
-        <h3 class="text-4xl font-semibold mt-2">
-          Build whatever from your idea, seriously.
-        </h3>
-        <p class="max-w-3xl mt-4 text-gray-500">
-          Turning an Idea to a business.
-          Figure out what problem is being solved.
-          Find your market.
-          Find your support, have you ever noticed how few successful startups were founded by just one person?
-          So, here we are. To build the MVP.
-        </p>
-
-        <Button
-          class="mt-5" to="/" variant="blue"
-          rounded
-        >
-          Contact Us
-          <span class="ml-2">
-            <FontAwesomeIcon :icon="['fas', 'chevron-right']" />
-          </span>
-        </Button>
-      </div>
-    </div>
+    <!-- Quotes - end -->
   </div>
 </template>
 
 <script>
+import { VueTyper } from 'vue-typer';
 import wadawChipset from '@/assets/images/wadaw-chipset.png';
+import target from '@/assets/images/target.png';
 
 export default {
   name: 'IndexPage',
+  components: { VueTyper },
   data() {
     return {
       wadawChipset,
+      target,
       experiences: [
         {
           icon: ['far', 'lightbulb'],
           title: 'Start Your Idea',
-          text: "It's never too late to start something. Here we are.",
+          text: "It's never too late to start something. And even though it's late, better late than never.",
         },
         {
-          icon: ['fas', 'users'],
+          icon: ['fas', 'people-roof'],
           title: 'Open Discuss',
-          text: 'Criticizing idea and gather creative problem solving.',
+          text: 'Criticizing idea and gather creative problem solving. And develop SMART goals.',
         },
         {
-          icon: ['fas', 'cogs'],
+          icon: ['fas', 'bolt-lightning'],
           title: 'Execute The Plan',
           text: "Is an easy concept to talk about, but it's a hard one to well... Execute!",
+        },
+        {
+          icon: ['fas', 'road'],
+          title: 'Keep on track',
+          text: 'Assign tasks. Establish regular communication. Track our progress. Evaluate performance.',
         },
       ],
       quotes: [
@@ -161,3 +266,84 @@ export default {
   },
 };
 </script>
+
+<style>
+  #main-title .vue-typer .custom.char.typed {
+    color: white;
+  }
+
+  #main-title h1:first-child .vue-typer .custom.char.typed:first-child,
+  #main-title h1:nth-child(2) .vue-typer .custom.char.typed:first-child,
+  #main-title h1:nth-child(3) .vue-typer .custom.char.typed:first-child,
+  #main-title h1:nth-child(4) .vue-typer .custom.char.typed:nth-child(4),
+  #main-title h1:nth-child(5) .custom.char.typed:first-child {
+    color: #F86D3F;
+  }
+
+  #main-title .vue-typer .custom.caret {
+    width: 7px;
+    background-color: white;
+  }
+
+  @keyframes cssAnimationHide {
+    to { opacity: 1; }
+  }
+  @-webkit-keyframes cssAnimationHide {
+    to { opacity: 1; }
+  }
+  /* 2120,2360,2600,3500 */
+
+  #main-title h1:nth-child(2) {
+    animation: cssAnimationHide 0s 2.1s forwards;
+    opacity: 0;
+    /* Firefox */
+    -moz-animation: cssAnimationHide 0s 2.1s forwards;
+    /* Safari and Chrome */
+    -webkit-animation: cssAnimationHide 0s 2.1s forwards;
+    /* Opera */
+    -o-animation: cssAnimationHide 0s 2.1s forwards;
+  }
+
+  #main-title h1:nth-child(3) {
+    animation: cssAnimationHide 0s 2.3s forwards;
+    opacity: 0;
+    /* Firefox */
+    -moz-animation: cssAnimationHide 0s 2.3s forwards;
+    /* Safari and Chrome */
+    -webkit-animation: cssAnimationHide 0s 2.3s forwards;
+    /* Opera */
+    -o-animation: cssAnimationHide 0s 2.3s forwards;
+  }
+
+  #main-title h1:nth-child(4) {
+    animation: cssAnimationHide 0s 2.6s forwards;
+    opacity: 0;
+    /* Firefox */
+    -moz-animation: cssAnimationHide 0s 2.6s forwards;
+    /* Safari and Chrome */
+    -webkit-animation: cssAnimationHide 0s 2.6s forwards;
+    /* Opera */
+    -o-animation: cssAnimationHide 0s 2.6s forwards;
+  }
+  #main-title h1:nth-child(5) .vue-typer:nth-child(1) {
+    animation: cssAnimationHide 0s 2.9s forwards;
+    opacity: 0;
+    /* Firefox */
+    -moz-animation: cssAnimationHide 0s 2.9s forwards;
+    /* Safari and Chrome */
+    -webkit-animation: cssAnimationHide 0s 2.9s forwards;
+    /* Opera */
+    -o-animation: cssAnimationHide 0s 2.9s forwards;
+  }
+
+  /* #main-title .vue-typer {
+    .custom.char {
+      &.typed {
+      }
+      &.selected {
+      }
+      &.erased {
+      }
+    }
+  } */
+</style>

@@ -35,8 +35,7 @@ export default {
   ],
 
   // Plugins to run before rendering page: https://go.nuxtjs.dev/config-plugins
-  plugins: [
-  ],
+  plugins: ['~/plugins/directives.js'],
 
   // Auto import components: https://go.nuxtjs.dev/config-components
   components: true,
@@ -57,7 +56,7 @@ export default {
     icons: {
       solid: [
         'faHome', 'faUsers', 'faCogs', 'faQuoteRight', 'faChevronRight', 'faBars', 'faHeart',
-        'faArrowCircleRight', 'faLaptopCode'
+        'faArrowCircleRight', 'faLaptopCode', 'faRoad', 'faBoltLightning', 'faPeopleRoof'
       ],
       regular: ['faLightbulb', 'faHandPeace'],
       brands: ['faReact'],
@@ -68,6 +67,7 @@ export default {
     families: {
       Quicksand: [300, 400, 500, 600, 700],
       PlayfairDisplay: true,
+      Archivo: [200, 300, 400, 500, 600, 700],
     },
   },
 

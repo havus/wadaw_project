@@ -1,7 +1,7 @@
 <template>
   <div class="text-gray-blue-900">
     <div class="bg-gray-blue-900 py-12">
-      <div class="container mx-auto flex flex-wrap flex-col lg:flex-row justify-center lg:justify-between lg:mt-24 lg:mb-20 px-10">
+      <div class="container mx-auto flex flex-wrap flex-col lg:flex-row justify-center lg:justify-between lg:mt-24 lg:mb-20 px-10 lg:px-20">
         <div id="main-title" class="text-white max-w-112">
           <!-- <h1 class="text-2xl font-medium tracking-wider">
             <span class="text-4xl font-bold text-orange-300">W</span>ell-being
@@ -123,8 +123,8 @@
         <div class="grid grid-cols-1 lg:grid-cols-2 justify-items-center gap-7">
           <div class="grid grid-cols-1 md:grid-cols-2 justify-items-center gap-4 w-full order-2 lg:order-1">
             <div
-              v-scollanimation
               v-for="(experience, i) in experiences" :key="i"
+              v-scollanimation
               class="flex flex-col rounded border-1 p-5 w-full items-center lg:items-start"
             >
               <div class="w-12 h-12 bg-orange-100 rounded-full flex justify-center items-center">
@@ -185,8 +185,8 @@
     <div class="bg-gray-blue-50 bg-gradient-to-b from-white py-40">
       <div class="container p-8 lg:px-32 mx-auto flex flex-wrap">
         <div
-          v-scollanimation
           v-for="(quote, i) in quotes" :key="i"
+          v-scollanimation
           class="w-full lg:w-1/2 xl:w-1/3 mx-auto mb-12 lg:p-4"
         >
           <div class="bg-white px-14 py-5 rounded-md relative filter drop-shadow-lg flex flex-col justify-between">

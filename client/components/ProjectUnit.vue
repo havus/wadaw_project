@@ -146,7 +146,7 @@ import nodejsLogo from '@/assets/images/tech_stack_logos/nodejs-logo.png';
 import nuxtjsLogo from '@/assets/images/tech_stack_logos/nuxtjs-logo.png';
 import tailwindcssLogo from '@/assets/images/tech_stack_logos/tailwindcss-logo.png';
 import vuejsLogo from '@/assets/images/tech_stack_logos/vuejs-logo.png';
-import hafidzProfileImage from '@/assets/images/hafidz-sm-tiny.png';
+import hafidzProfileImage from '@/assets/images/hafidz-sm.png';
 
 export default {
   name: 'ProjectUnitComponent',

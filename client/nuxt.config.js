@@ -56,9 +56,10 @@ export default {
     icons: {
       solid: [
         'faHome', 'faUsers', 'faCogs', 'faQuoteRight', 'faChevronRight', 'faBars', 'faHeart',
-        'faArrowCircleRight', 'faLaptopCode', 'faRoad', 'faBoltLightning', 'faPeopleRoof'
+        'faArrowCircleRight', 'faLaptopCode', 'faRoad', 'faBoltLightning', 'faPeopleRoof',
+        'faCircleCheck', 'faCircleNotch',
       ],
-      regular: ['faLightbulb', 'faHandPeace'],
+      regular: ['faLightbulb', 'faHandPeace', 'faCircle'],
       brands: ['faReact'],
     },
   },

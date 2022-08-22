@@ -39,7 +39,7 @@ export default {
       links: [
         { path: '/', text: 'Home' },
         { path: '/projects', text: 'Projects' },
-        { path: '/about', text: 'About' },
+        { path: '/contributors', text: 'Contributors' },
       ],
     };
   },

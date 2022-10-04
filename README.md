@@ -11,5 +11,5 @@
 - **[MIT license](http://opensource.org/licenses/mit-license.php)**
 - Copyright 2020 © <a href="havus.id" target="_blank">HAVUS</a>.
 
-<br><br><br>
+<br><br>
 ### Happy Creation with Us!
